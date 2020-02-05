@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <FlexTextarea v-model="text" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import FlexTextarea from "./components/FlexTextarea";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    FlexTextarea
+  },
+  data() {
+    return {
+      text: ""
+    };
   }
 };
 </script>
@@ -23,6 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
 }
 </style>
